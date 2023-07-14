@@ -18,7 +18,7 @@ return new class extends Migration
             $table -> time('orario_partenza');
             $table -> time('orario_arrivo');
             $table -> string('codice', 10) -> unique();
-            $table -> integer('numero_carrozze');
+            $table -> unsignedinteger('numero_carrozze');
             $table -> boolean('in_orario') -> default(true);
             $table -> boolean('cancellato') -> default(false);
 
