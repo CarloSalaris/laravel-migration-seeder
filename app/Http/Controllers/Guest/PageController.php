@@ -11,7 +11,8 @@ class PageController extends Controller
 {
     public function index() {
 
-        $trains = 'trains db'; /* Train :: all(); */
+        $trains = Train :: all()
+                    -> sortBy('orario_partenza');
 
         return view("home", compact('trains'));
     }
